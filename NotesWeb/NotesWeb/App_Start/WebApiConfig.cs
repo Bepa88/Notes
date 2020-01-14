@@ -19,6 +19,11 @@ namespace NotesWeb
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.Routes.MapHttpRoute(
+                name: "ActionRoutes",
+                routeTemplate: "api/{controller}/{action}"
+            );
         }
     }
 }
